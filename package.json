@@ -1,0 +1,33 @@
+{
+  "name": "postit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start:back",
+    "start:back": "nodemon server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:client":"cd client && nodemon start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Waltmaza1/postit.git"
+  },
+  "author": "Walter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Waltmaza1/postit/issues"
+  },
+  "homepage": "https://github.com/Waltmaza1/postit#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
