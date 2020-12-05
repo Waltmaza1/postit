@@ -6,7 +6,7 @@ const userController = require('../../controllers/userController');
 router.route('/signup')
       .post(userController.create);
 
-router.route('/friends')
+router.route('/get')
       .get(userController.findAll)
 
 module.exports = router;
